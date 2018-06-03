@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>ValkyrieSama</authors>
+    <owners>ValkyrieSama</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Unity key binding helpers</description>
+    <copyright>Copyright 2018</copyright>
+    <tags>C# Unity KeyBinding</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\ValhallaCore.dll" target="lib\net46\ValhallaCore.dll" />
+    <file src="bin\Release\ValhallaCore.xml" target="lib\net46\ValhallaCore.xml" />
+</files>
+</package>

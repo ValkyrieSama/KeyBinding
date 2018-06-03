@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A97009A-1C4F-415E-A090-9CA8A81C8BDB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KeyBinding</RootNamespace>
+    <AssemblyName>KeyBinding</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1591;</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\KeyBinding.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity-2017.4.1f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Unity-2017.4.1f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files\Unity-2017.4.1f1\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Control Events\Generic\KeyEventManager.cs" />
+    <Compile Include="src\Control Events\Specialized\DeviceInputEventManager.cs" />
+    <Compile Include="src\Control Events\Specialized\KeyboardEventManager.cs" />
+    <Compile Include="src\Device Manager\Editor\DeviceManagerEditor.cs" />
+    <Compile Include="src\Device Manager\Components\DeviceManager.cs" />
+    <Compile Include="src\Device Manager\Control\IInputControlSource.cs" />
+    <Compile Include="src\Device Manager\Control\InputControl.cs" />
+    <Compile Include="src\Device Manager\Control\InputControlMapping.cs" />
+    <Compile Include="src\Device Manager\Control\InputControlState.cs" />
+    <Compile Include="src\Device Manager\Control\InputControlTypes.cs" />
+    <Compile Include="src\Device Manager\Control\OneAxisInputControl.cs" />
+    <Compile Include="src\Device Manager\Control\TwoAxisInputControl.cs" />
+    <Compile Include="src\Device Manager\Device\DeviceTracker.cs" />
+    <Compile Include="src\Device Manager\Device\InputDevice.cs" />
+    <Compile Include="src\Device Manager\Device\InputDeviceManager.cs" />
+    <Compile Include="src\Device Manager\InputManager.cs" />
+    <Compile Include="src\Device Manager\Unity\ControlSources\UnityAnalogSource.cs" />
+    <Compile Include="src\Device Manager\Unity\ControlSources\UnityButtonSource.cs" />
+    <Compile Include="src\Device Manager\Unity\ControlSources\UnityGyroAxisSource.cs" />
+    <Compile Include="src\Device Manager\Unity\ControlSources\UnityKeyCodeAxisSource.cs" />
+    <Compile Include="src\Device Manager\Unity\ControlSources\UnityKeyCodeComboSource.cs" />
+    <Compile Include="src\Device Manager\Unity\ControlSources\UnityKeyCodeSource.cs" />
+    <Compile Include="src\Device Manager\Unity\ControlSources\UnityMouseAxisSource.cs" />
+    <Compile Include="src\Device Manager\Unity\ControlSources\UnityMouseButtonSource.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\AmazonFireTVProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\AmazonFireTVRemoteProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\AndroidTVProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\AndroidTVRemoteProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\AppleMFiProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\ExecutionerXProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\GameStickLinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\GameStickProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\GenericAndroidProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\GenericBlackberryProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\GenericLinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\GoogleNexusPlayerProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\GoogleNexusPlayerRemoteProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\GreenThrottleAtlasAndroidProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\HamaBlackForceWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF310LinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF310ModeDMacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF310ModeDWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF310ModeXMacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF310ModeXWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF510LinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF510WinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF710LinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF710MacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF710ModeDWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechF710ModeXWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechRumblePad2MacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechRumblePad2WinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\LogitechWingManWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\MaxFireBlaze5WinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\MogaProLinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\MogaProMacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\MogaProWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\NatecGenesisP44WinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\NVidiaShieldAndroidProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\NVidiaShieldWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\OuyaLinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\OuyaWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation2WinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation3AndroidProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation3LinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation3MacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation3ShenghicWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation3WinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation4AndroidProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation4LinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation4MacBTProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation4MacUSBProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation4Profile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStation4WinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\PlayStationVitaPSMProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\SamsungGP20AndroidProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\SpeedlinkStrikeMacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\SpeedlinkStrikeWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\SteelSeriesFreeLinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\SteelSeriesFreeMacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\SteelSeriesFreeWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\ValveStreamingWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\Xbox360AndroidProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\Xbox360LinuxProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\Xbox360MacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\Xbox360WinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\XboxOneMacProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\XboxOneProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\DeviceProfiles\XboxOneWinProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\UnityInputDevice.cs" />
+    <Compile Include="src\Device Manager\Unity\UnityInputDeviceManager.cs" />
+    <Compile Include="src\Device Manager\Unity\UnityInputDeviceProfile.cs" />
+    <Compile Include="src\Device Manager\Unity\UnityInputDeviceProfileList.cs" />
+    <Compile Include="src\Device Manager\Unity\UnityUnknownDeviceProfile.cs" />
+    <Compile Include="src\Device Manager\Utility\CameraHelper.cs" />
+    <Compile Include="src\Device Manager\Utility\DeadZone.cs" />
+    <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\InputAxis.cs" />
+    <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\InputAxisType.cs" />
+    <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\InputManagerHelper.cs" />
+    <Compile Include="src\Device Manager\Utility\Errors.cs" />
+    <Compile Include="src\Device Manager\Utility\Logger.cs" />
+    <Compile Include="src\Device Manager\Utility\Messages.cs" />
+    <Compile Include="src\Device Manager\VersionInfo.cs" />
+    <Compile Include="src\Key Bindings\Generic\ControlPreset.cs" />
+    <Compile Include="src\Key Bindings\Generic\KeybindingManager.cs" />
+    <Compile Include="src\UIEventSystem\BindingBtn.cs" />
+    <Compile Include="src\UIEventSystem\UIManager.cs" />
+    <Compile Include="src\Key Bindings\Specialized\DeviceBindingManager.cs" />
+    <Compile Include="src\Key Bindings\Specialized\KeyboardBindingManager.cs" />
+    <Compile Include="src\Multiplayer Manager\IPlayer.cs" />
+    <Compile Include="src\Multiplayer Manager\MultiplayerManager.cs" />
+    <Compile Include="src\Multiplayer Manager\PlayerDeviceTracker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ValhallaCore\ValhallaCore.csproj">
+      <Project>{49dc4c90-54e3-4239-97d5-a3283d6d758c}</Project>
+      <Name>ValhallaCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if exist "$(ProjectDir)packages\NuGet\NuGet.exe" (
+    "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir)
+    if not "$(NUGETLOCAL)" == "" (
+        echo "---- Packing in $(NUGETLOCAL) ----"
+        "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(NUGETLOCAL)"
+    ) else (
+        echo "---- Packing in $(ProjectDir) ----"
+        "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(ProjectDir)"
+    )
+) else (
+    echo -------------NuGet.exe wat not found-----------------
+)</PostBuildEvent>
+  </PropertyGroup>
+</Project>
