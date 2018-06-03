@@ -178,17 +178,19 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if exist "$(ProjectDir)packages\NuGet\NuGet.exe" (
-    "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir)
-    if not "$(NUGETLOCAL)" == "" (
-        echo "---- Packing in $(NUGETLOCAL) ----"
-        "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(NUGETLOCAL)"
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+    echo --------- Building NuGet Package -----------------
+    if exist "$(ProjectDir)packages\NuGet\NuGet.exe" (
+        if not "$(NUGETLOCAL)" == "" (
+            echo ---- Packing in $(NUGETLOCAL) ----
+            "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(NUGETLOCAL)"
+        ) else (
+            echo ---- Packing in $(ProjectDir) ----
+            "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(ProjectDir)"
+        )
     ) else (
-        echo "---- Packing in $(ProjectDir) ----"
-        "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(ProjectDir)"
+        echo ------------- NuGet.exe was not found at : $(ProjectDir)packages\NuGet\NuGet.exe  -----------------
     )
-) else (
-    echo -------------NuGet.exe wat not found-----------------
 )</PostBuildEvent>
   </PropertyGroup>
 </Project>

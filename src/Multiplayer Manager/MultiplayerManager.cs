@@ -2,7 +2,6 @@
 using UnityEngine;
 using ValhallaGames.Unity.DeviceDetection;
 using ValhallaGames.Unity.Utility;
-using ValhallaGames.Unity.Utility;
 
 namespace ValhallaGames.Unity.Multiplayer {
 
