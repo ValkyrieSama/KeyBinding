@@ -84,7 +84,7 @@ namespace ValhallaGames.Unity.KeyBinding {
         /// <summary>
         ///     Raises the key update event.
         /// </summary>
-        /// <param name="name">Name.</param>
+        /// <param name="key">Name.</param>
         public void OnKeyUpdate(TKey key) {
             if (isDebugMode) Debug.Log("New key setted: " + key);
 

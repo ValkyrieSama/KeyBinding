@@ -4,7 +4,7 @@ namespace ValhallaGames.Unity.DeviceDetection {
 
     public class UnityInputDeviceProfileList : ScriptableObject {
 
-        private const string LIB_NAMESPACE = "ValkyrieSama.Controllers.";
+        private const string LIB_NAMESPACE = "ValhallaGames.Unity.DeviceDetection.";
 
         public static string[] Profiles = {
             LIB_NAMESPACE + "AmazonFireTVProfile",

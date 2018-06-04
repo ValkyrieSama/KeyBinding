@@ -39,7 +39,7 @@ namespace ValhallaGames.Unity.KeyBinding.Device {
         /// </summary>
         /// <returns>The control.</returns>
         /// <param name="joystickId">Joystick identifier.</param>
-        /// <param name="type">Type.</param>
+        /// <param name="handle">Type.</param>
         public InputControl GetControl(int joystickId, THandle handle) {
             return DeviceManager.GetControl(joystickId, GetKey(handle));
         }

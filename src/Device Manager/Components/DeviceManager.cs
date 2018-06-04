@@ -42,7 +42,7 @@ namespace ValhallaGames.Unity.DeviceDetection {
 
         protected override void OnEnable() {
             if (isDebugMode) {
-                Debug.Log("ValkyrieSama's Controller (version " + InputManager.Version + ")");
+                Debug.Log("ValhallaGames's Controller (version " + InputManager.Version + ")");
                 Logger.OnLogMessage += HandleOnLogMessage;
             }
 
