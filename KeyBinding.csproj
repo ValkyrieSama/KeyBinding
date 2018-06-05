@@ -184,10 +184,10 @@
     if exist "$(ProjectDir)packages\NuGet\NuGet.exe" (
         if not "$(NUGETLOCAL)" == "" (
             echo ---- Packing in $(NUGETLOCAL) ----
-            "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(NUGETLOCAL)"
+            "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(NUGETLOCAL)" -Prop Configuration=Release
         ) else (
             echo ---- Packing in $(ProjectDir) ----
-            "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(ProjectDir)"
+            "$(ProjectDir)packages\NuGet\NuGet.exe" pack $(ProjectDir) -OutputDirectory "$(ProjectDir)" -Prop Configuration=Release
         )
     ) else (
         echo ------------- NuGet.exe was not found at : $(ProjectDir)packages\NuGet\NuGet.exe  -----------------
