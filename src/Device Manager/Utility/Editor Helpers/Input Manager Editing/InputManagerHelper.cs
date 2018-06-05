@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
 
 namespace ValhallaGames.Unity.DeviceDetection.Editor {
 
@@ -14,6 +16,33 @@ namespace ValhallaGames.Unity.DeviceDetection.Editor {
             var axesProperty = obj.FindProperty(AXES);
             axesProperty.ClearArray();
             obj.ApplyModifiedProperties();
+            CreateDefaultInputs();
+        }
+
+        public static void CreateDefaultInputs() {
+            var axes = new List<InputAxis> {
+                DefaultKeyboardInputAxis.Horizontal,
+                DefaultKeyboardInputAxis.Vertical,
+                DefaultKeyboardInputAxis.Fire1,
+                DefaultKeyboardInputAxis.Fire2,
+                DefaultKeyboardInputAxis.Fire3,
+                DefaultKeyboardInputAxis.Jump,
+                DefaultMouseInputAxis.MouseX,
+                DefaultMouseInputAxis.MouseY,
+                DefaultMouseInputAxis.MouseScrollWheel,
+                DefaultJoystickInputAxis.Horizontal,
+                DefaultJoystickInputAxis.Vertical,
+                DefaultJoystickInputAxis.Fire1,
+                DefaultJoystickInputAxis.Fire2,
+                DefaultJoystickInputAxis.Fire3,
+                DefaultJoystickInputAxis.Jump,
+                DefaultJoystickInputAxis.Submit,
+                DefaultKeyboardInputAxis.Submit,
+                DefaultJoystickInputAxis.Cancel
+            };
+
+            foreach (var axis in axes)
+                AddAxis(axis);
         }
 
         public static void SetupInputManager(int joystickCount = 10, int analogCount = 20) {
@@ -63,7 +92,6 @@ namespace ValhallaGames.Unity.DeviceDetection.Editor {
             obj.ApplyModifiedProperties();
 
             var axisProperty = axesProperty.GetArrayElementAtIndex(axesProperty.arraySize - 1);
-
             GetChildProperty(axisProperty, "m_Name").stringValue = axis.name;
             GetChildProperty(axisProperty, "descriptiveName").stringValue = axis.descriptiveName;
             GetChildProperty(axisProperty, "descriptiveNegativeName").stringValue = axis.descriptiveNegativeName;

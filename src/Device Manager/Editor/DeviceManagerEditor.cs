@@ -10,7 +10,7 @@ namespace ValhallaGames.Unity.DeviceDetection.Editor {
             serializedObject.Update();
 
             DrawDefaultInspector();
-
+            
             if (GUILayout.Button("Create Inputs")) InputManagerHelper.SetupInputManager();
 
             if (GUILayout.Button("Clear Inputs")) InputManagerHelper.ClearInputs();

@@ -153,6 +153,9 @@
     <Compile Include="src\Device Manager\Unity\UnityUnknownDeviceProfile.cs" />
     <Compile Include="src\Device Manager\Utility\CameraHelper.cs" />
     <Compile Include="src\Device Manager\Utility\DeadZone.cs" />
+    <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\Defaults Axis\DefaultJoystickInputAxis.cs" />
+    <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\Defaults Axis\DefaultKeyboardInputAxis.cs" />
+    <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\Defaults Axis\DefaultMouseInputAxis.cs" />
     <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\InputAxis.cs" />
     <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\InputAxisType.cs" />
     <Compile Include="src\Device Manager\Utility\Editor Helpers\Input Manager Editing\InputManagerHelper.cs" />

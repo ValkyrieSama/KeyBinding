@@ -1,6 +1,9 @@
-﻿namespace ValhallaGames.Unity.DeviceDetection.Editor {
-    
+﻿using ValhallaGames.Unity.DeviceDetection.Editor;
+
+namespace ValhallaGames.Unity.DeviceDetection.Editor {
+
     public class InputAxis {
+
         public string name;
         public string descriptiveName;
         public string descriptiveNegativeName;
@@ -18,7 +21,9 @@
 
         public AxisType type;
 
-        public int axis;
-        public int joyNum;
+        public int axis = 0;
+        public int joyNum = 0;
+
     }
 }
+
