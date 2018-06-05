@@ -38,8 +38,7 @@ namespace ValhallaGames.Unity.ControlEvents {
         protected virtual void Awake() {
             keybindingManager = FindObjectOfType<KeybindingManager<THandle, TKey>>();
             if (keybindingManager == null)
-                Debug.LogError("KeybindingManager of type <" + typeof(THandle) + "," + typeof(TKey) +
-                               "> missing in scene.");
+                Debug.LogError("KeybindingManager of type <" + typeof(THandle) + "," + typeof(TKey) + "> missing in scene.");
             InitControls();
             if (isDebugMode) EnableDebug();
         }

@@ -77,7 +77,9 @@ namespace ValhallaGames.Unity.KeyBinding {
         /// <returns>The key.</returns>
         /// <param name="handle">Handle.</param>
         public TKey GetKey(THandle handle) {
-            foreach (var key in Keys) if (key.Key.Equals(handle)) return key.Value;
+            foreach (var key in Keys)
+                if (key.Key.Equals(handle))
+                    return key.Value;
             return default(TKey);
         }
 
@@ -87,8 +89,7 @@ namespace ValhallaGames.Unity.KeyBinding {
         /// <param name="key">Name.</param>
         public void OnKeyUpdate(TKey key) {
             if (isDebugMode) Debug.Log("New key setted: " + key);
-
-            if (KeyUpdatedEvent != null) KeyUpdatedEvent(key);
+            KeyUpdatedEvent?.Invoke(key);
         }
 
         /// <summary>

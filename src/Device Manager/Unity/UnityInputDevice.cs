@@ -14,7 +14,7 @@ namespace ValhallaGames.Unity.DeviceDetection {
 
         public UnityInputDevice(UnityInputDeviceProfile profile) : base(profile.Name) { Initialize(profile, 0); }
 
-        internal int JoystickId { get; private set; }
+        public int JoystickId { get; private set; }
 
         public UnityInputDeviceProfile Profile { get; protected set; }
 
