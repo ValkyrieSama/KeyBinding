@@ -7,7 +7,7 @@
     <ProjectGuid>{8A97009A-1C4F-415E-A090-9CA8A81C8BDB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KeyBinding</RootNamespace>
+    <RootNamespace>ValhallaGames.Unity</RootNamespace>
     <AssemblyName>KeyBinding</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
