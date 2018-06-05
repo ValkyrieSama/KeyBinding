@@ -55,7 +55,7 @@ namespace ValhallaGames.Unity.DeviceDetection {
             isSetup = true;
 
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR
-            if (EnableXInput) XInputDeviceManager.Enable();
+            //if (EnableXInput) XInputDeviceManager.Enable();
 #endif
 
             if (OnSetup != null) {
