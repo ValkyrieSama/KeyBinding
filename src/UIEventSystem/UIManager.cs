@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using ValhallaGames.Unity.Utility;
 using ValhallaGames.Unity.KeyBinding;
 
-namespace ValhallaGames.Unity.EventSystem {
+namespace ValhallaGames.Unity.UIEventSystem {
 
     public abstract class UIManager<THandle, TKey> : Manager {
 
@@ -27,7 +27,7 @@ namespace ValhallaGames.Unity.EventSystem {
 
         public void ListenToKey(THandle handle) {
             currentHandle = handle;
-            currentBtn = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.GetComponent<BindingBtn<THandle, TKey>>();
+            currentBtn = EventSystem.current.currentSelectedGameObject.GetComponent<BindingBtn<THandle, TKey>>();
             currentBtn.GetComponent<Button>().Select();
 
             var defaultHandle = default(THandle);
@@ -37,7 +37,7 @@ namespace ValhallaGames.Unity.EventSystem {
         public void UpdateUI(TKey key) {
             currentHandle = default(THandle);
             currentBtn.SetKeyName(key.ToString());
-            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(null);
         }
 
         private void LoadKeyCode() {

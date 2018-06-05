@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace ValhallaGames.Unity.EventSystem {
+namespace ValhallaGames.Unity.UIEventSystem {
 
     [RequireComponent(typeof(Button))]
     public abstract class BindingBtn<THandle, TKey> : MonoBehaviour {
