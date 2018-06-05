@@ -5,17 +5,18 @@ namespace ValhallaGames.Unity.DeviceDetection {
     public class InputControlMapping {
 
         private string handle;
-        internal bool IgnoreInitialZeroValue;
-        internal bool Invert;
+
+        public bool IgnoreInitialZeroValue { get; set; }
+        public bool Invert { get; set; }
 
         // Raw inputs won't be processed except for scaling (mice and trackpads).
-        internal bool Raw;
+        public bool Raw { get; set; }
 
-        internal float Scale = 1.0f;
-        internal IInputControlSource Source;
-        internal Range SourceRange = Range.Complete;
-        internal InputControlTypes Target;
-        internal Range TargetRange = Range.Complete;
+        public float Scale { get; set; } = 1.0f;
+        public IInputControlSource Source { get; set; }
+        public Range SourceRange { get; set; } = Range.Complete;
+        public InputControlTypes Target { get; set; }
+        public Range TargetRange { get; set; } = Range.Complete;
 
         public string Handle {
             get { return string.IsNullOrEmpty(handle) ? Target.ToString() : handle; }
@@ -55,15 +56,14 @@ namespace ValhallaGames.Unity.DeviceDetection {
 
         private bool isYAxisInverted() { return Invert != (IsYAxis && InputManager.InvertYAxis); }
 
-        internal class Range {
+        public class Range {
 
-            internal static Range Complete = new Range {Minimum = -1.0f, Maximum = 1.0f};
-            internal static Range Positive = new Range {Minimum = 0.0f, Maximum = 1.0f};
-            internal static Range Negative = new Range {Minimum = -1.0f, Maximum = 0.0f};
-            internal float Maximum;
+            public static Range Complete = new Range {Minimum = -1.0f, Maximum = 1.0f};
+            public static Range Positive = new Range {Minimum = 0.0f, Maximum = 1.0f};
+            public static Range Negative = new Range {Minimum = -1.0f, Maximum = 0.0f};
 
-            internal float Minimum;
-
+            public float Maximum { get; set; }
+            public float Minimum { get; set; }
         }
 
     }

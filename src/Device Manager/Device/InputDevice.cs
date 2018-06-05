@@ -8,7 +8,7 @@ namespace ValhallaGames.Unity.DeviceDetection {
 
         private bool invertYAxis = false;
 
-        internal int SortOrder = int.MaxValue;
+        public int SortOrder { get; set; } = int.MaxValue;
 
         public InputDevice(string name) {
             Name = name;
